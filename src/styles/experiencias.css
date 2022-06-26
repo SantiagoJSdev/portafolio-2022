@@ -1,0 +1,106 @@
+
+.home__experiencias .experiencias__contenido,
+.home__experiencias-mode .experiencias__contenido{
+width: 70%;
+height: 95%;
+ margin-top: 40px;
+}
+.experiencias__contenido--title h1{
+  width: 100%;
+  font-size: calc(1.7em + 1.7vw);
+  font-weight: 700;
+  color: var(--color-white);
+  padding-bottom: 30px;
+  transition: all 0.5s ease;
+
+}
+.experiencias__contenido--title-mode h1{
+  width: 100%;
+  font-size: calc(1.7em + 1.7vw);
+  font-weight: 700;
+  color: var(--color-negro);
+  padding-bottom: 30px;
+  transition: all 0.5s ease;
+
+}
+.experiencias__contenido--content,
+.experiencias__contenido--content-mode  {
+  width: 100%;
+  height: 100%;
+   display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.experiencias__contenido--content div,
+.experiencias__contenido--content-mode div {
+  height: 18.5%;
+  width: 100%;
+   display: flex;
+   border-bottom: 4px solid red;
+}
+.experiencias__contenido--content div:nth-child(5),
+.experiencias__contenido--content-mode div:nth-child(5) {
+  border: none;
+}
+ 
+.experiencias__contenido--content div h3,
+.experiencias__contenido--content-mode div h3{
+  width: 20%;
+  height: 100%;
+   display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-size: calc(0.5em + 0.5vw);
+  color: #ec4a24;
+  transition: all 0.5s ease;
+
+
+}
+.experiencias__contenido--content div h1{
+  width: 40%;
+  height: 100%;
+   display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-size: calc(0.5em + 0.5vw);
+  color: var(--color-white);
+  transition: all 0.5s ease;
+}
+.experiencias__contenido--content-mode div h1{
+  width: 40%;
+  height: 100%;
+   display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-size: calc(0.5em + 0.5vw);
+  color: var(--color-negro);
+  transition: all 0.5s ease;
+}
+.experiencias__contenido--content div h1:hover{
+  color: #ec4a24;
+  transform: scale(1.04);
+  transition: all 0.5s ease;
+}
+.experiencias__contenido--content div p{
+  width: 40%;
+  height: 100%;
+   display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-size: calc(0.5em + 0.5vw);
+  color: var(--color-white);
+  transition: all 0.5s ease;
+
+}
+.experiencias__contenido--content-mode div p{
+  width: 40%;
+  height: 100%;
+   display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  font-size: calc(0.5em + 0.5vw);
+  color: var(--color-negro);
+  transition: all 0.5s ease;
+
+}

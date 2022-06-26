@@ -1,24 +1,67 @@
-import logo from './logo.svg';
+import { useEffect, useReducer, useState } from 'react';
 import './App.css';
+import { Contacto } from './component/Contacto';
+import { Experiencias } from './component/Experiencias';
+import { Habilidades } from './component/Habilidades';
+import { Nav } from './component/Nav';
+import { PrincipalDescripcion } from './component/PrincipalDescripcion';
+import { Servivios } from './component/Servivios';
+import { Context } from './context/Context';
+import { reducerApp } from './context/reducerApp';
+
+const init = () => ({ darkMode: false })
 
 function App() {
+
+
+
+
+
+
+
+  const [user, dispatch] = useReducer(reducerApp, {}, init)
+
+
+
+  const handleclick = () => {
+    console.log('clic')
+    // window.scrollTo(0, 2958)
+    window.location.href = "http://localhost:3000/#page-servicio"
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={{ user, dispatch }}>
+
+      {/* <button onClick={handleclick} className='btn-new'>Holaaaaa</button> */}
+
+      <div id='125' className="container__home">
+
+        <header className="home__header">
+          <Nav />
+        </header>
+
+        <section id="page-inicio" className={user.mode ? 'darkMode' : 'home__principal'}>
+          <PrincipalDescripcion />
+        </section>
+
+        <section id="page-servicio" className={user.mode ? 'darkMode-segundo' : 'home__segundo'}>
+          <Servivios />
+        </section>
+
+        <section id="page-experiencia" className={user.mode ? 'home__experiencias-mode' : 'home__experiencias'}>
+          <Experiencias />
+        </section>
+
+        <section id="page-habilidades" className='home__habilidades'>
+          <Habilidades />
+        </section>
+        <section id="page-contacto" className={user.mode ? 'home__contacto-mode' : 'home__contacto'}>
+          <Contacto />
+        </section>
+
+      </div>
+    </Context.Provider>
   );
 }
 
