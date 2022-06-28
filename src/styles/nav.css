@@ -99,6 +99,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* border: 2px solid red; */
 }
 
 .header__nav> ul> li:nth-child(1),
@@ -127,6 +128,12 @@
     justify-content: flex-end;
     margin-right: 1.25em;
     font-size: 1.875em;
+}
+.header__nav >ul >li:nth-child(3),
+.header__nav-1 >ul> li:nth-child(3),
+.header__nav-1-mode >ul> li:nth-child(3),
+.header__nav--mode> ul> li:nth-child(3) {
+   justify-content: flex-end;
 }
 
 .header__nav >ul> li:nth-child(4) i,
@@ -392,4 +399,26 @@ svg:not(:root) {
     margin-right: 30px;
     color: var(--color-negro);
     transition: all 1s ease;
+  }
+
+  @media screen and (max-width:500px) {
+
+    .header__nav >ul >li:nth-child(1) i,
+.header__nav-1 >ul> li:nth-child(1) i,
+.header__nav-1-mode >ul> li:nth-child(1) i,
+.header__nav--mode >ul> li:nth-child(1) i {
+   display: none;
+}
+.header__nav >ul >li:nth-child(2),
+.header__nav-1 >ul> li:nth-child(2),
+.header__nav-1-mode >ul> li:nth-child(2),
+.header__nav--mode >ul> li:nth-child(2) {
+   display: none;
+}
+.header__nav >ul >li:nth-child(3),
+.header__nav-1 >ul> li:nth-child(3),
+.header__nav-1-mode >ul> li:nth-child(3),
+.header__nav--mode >ul> li:nth-child(3) {
+   justify-content: flex-start;
+}
   }

@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer, useRef, useState } from 'react';
 import './App.css';
 import { Contacto } from './component/Contacto';
 import { Experiencias } from './component/Experiencias';
@@ -14,28 +14,15 @@ const init = () => ({ darkMode: false })
 function App() {
 
 
-
-
-
-
-
   const [user, dispatch] = useReducer(reducerApp, {}, init)
 
 
 
-  const handleclick = () => {
-    console.log('clic')
-    // window.scrollTo(0, 2958)
-    window.location.href = "http://localhost:3000/#page-servicio"
-
-  }
-
   return (
     <Context.Provider value={{ user, dispatch }}>
 
-      {/* <button onClick={handleclick} className='btn-new'>Holaaaaa</button> */}
 
-      <div id='125' className="container__home">
+      <div className="container__home">
 
         <header className="home__header">
           <Nav />

@@ -3,7 +3,7 @@ import { validate } from '../selector/validate';
 
 
 export const useForm = ( initialState = {} ) => {
-    const [error, setError] = useState({})
+    // const [error, setError] = useState({})
 
     const [values, setValues] = useState(initialState);
 
@@ -18,13 +18,13 @@ export const useForm = ( initialState = {} ) => {
             ...values,
             [ target.name ]: target.value
         });
-        let resError = validate({
-            ...values,
-            [target.name]: target.value
-          })
-          setError(resError)
+        // let resError = validate({
+        //     ...values,
+        //     [target.name]: target.value
+        //   })
+        //   setError(resError)
     }
 
-    return [ values, handleInputChange, reset, error, setError ];
+    return [ values, handleInputChange, reset ];
 
 }

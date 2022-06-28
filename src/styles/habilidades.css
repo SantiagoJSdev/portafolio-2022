@@ -321,3 +321,66 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width:1250px) {
+    .home__habilidades--left {
+        width: 50%;
+    }
+    .home__habilidades--right {
+        width: 48%;
+    }  
+}
+
+@media screen and (max-width:1000px) {
+    .right__caja {
+        width: 70%;
+        height: 70%;
+    }
+    .right__img {
+        max-width: 30%;
+    }
+    
+.img--2 {
+    width: 30%;
+    right: -20px;
+    top: -170px;
+}
+
+.right__img--2 {
+    width: 30%;
+    right: -20px;
+    top: -70px;
+}
+}
+
+@media screen and (max-width:950px) {
+    .img--3 {
+       display: none;
+    }
+    .right__img--3 {
+        display: none;
+    }
+    
+}
+@media screen and (max-width:800px) {
+    .home__habilidades--right{
+        display: none;
+    }
+    .home__habilidades--left {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }  
+}
+
+@media screen and (max-width:605px) {
+    .home__habilidades--left {
+        width: 70%;
+    }  
+}
+
+@media screen and (max-width:360px) {
+    .home__habilidades--left {
+        width: 90%;
+    }  
+}

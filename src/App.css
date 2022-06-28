@@ -28,6 +28,7 @@ body {
   position: relative;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  transition: all 2s ease;
 }
 
 .home__header {
@@ -68,6 +69,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 2s ease;
+  overflow: hidden;
 }
 
 .home__segundo {
@@ -77,6 +80,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .darkMode {
@@ -113,10 +117,10 @@ body {
 }
 
 /* ///////////////////////////////////// */
- .btn-new{
+.btn-new {
   position: absolute;
   z-index: 10;
- }
+}
 
 
 @keyframes desvanecer {
@@ -126,5 +130,79 @@ body {
 
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width:1013px) {
+  .container__home {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0rem 45.625rem 45.625rem 53rem 47.625rem 45.625rem;
+    grid-template-areas:
+      "header header header header header"
+      "principal principal principal principal principal"
+      "segundo segundo segundo segundo segundo"
+      "experiencia experiencia experiencia experiencia experiencia"
+      "habilidades habilidades habilidades habilidades habilidades "
+      "contacto contacto contacto contacto contacto"
+    ;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  .container__home {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0rem 45.625rem 45.625rem 53rem 45.625rem 45.625rem;
+    grid-template-areas:
+      "header header header header header"
+      "principal principal principal principal principal"
+      "segundo segundo segundo segundo segundo"
+      "experiencia experiencia experiencia experiencia experiencia"
+      "habilidades habilidades habilidades habilidades habilidades "
+      "contacto contacto contacto contacto contacto"
+    ;
+  }
+}
+
+@media screen and (max-width:420px) {
+  .container__home {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0rem 45.625rem 45.625rem 60rem 45.625rem 45.625rem;
+    grid-template-areas:
+      "header header header header header"
+      "principal principal principal principal principal"
+      "segundo segundo segundo segundo segundo"
+      "experiencia experiencia experiencia experiencia experiencia"
+      "habilidades habilidades habilidades habilidades habilidades "
+      "contacto contacto contacto contacto contacto"
+    ;
+  }
+}
+
+@media screen and (max-width:300px) {
+  .darkMode-segundo {
+    flex-direction: column;
+  }
+
+  .home__segundo {
+    flex-direction: column;
+  }
+
+  .home__contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home__contacto-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

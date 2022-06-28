@@ -1,5 +1,7 @@
-export const validate = ({ nombre, email, mensaje }) => {
-    let error = {};
+    
+
+    export const validate = ( nombre, email, mensaje ) => {
+        let error = {};
     let regName = /^[a-z ,.'-]+$/i;
     let regEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
